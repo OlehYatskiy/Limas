@@ -1,0 +1,86 @@
+@white: #ffffff;
+@black: #000000;
+@PaleGoldenRod: #e3e182;
+@supernova: #fdaf2a;
+
+@langRadius: 35px;
+@roundBorder: 9em;
+@langPosition: 32px;
+
+
+.header {
+  position: relative;
+  color: @white;
+  background: @supernova;
+  font-family: sans-serif;
+  height: 100vh;
+  min-height: 670px;
+  text-align: center;
+
+  &__logo {
+    padding-top: 23vh;
+    width: 27em;
+	  filter: contrast(200%) brightness(100%) saturate(50%);
+  }
+
+  &__company-name {
+    font-family: 'Geometria';
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 65px;
+  }
+
+  &__company-goal {
+    // margin-top: 25px;
+    // margin-bottom: 63px;
+    margin: 25px 0 63px;
+    font-family: 'Geometria';
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+  }
+
+  &__button {
+
+    color: inherit;
+    height: 54px;
+    width: 207px;
+    border: 2px solid @white;
+    border-radius: @langRadius;
+    font-family: "Gotham Pro";
+    font-size: 12px;
+    font-weight: 700;
+    background: #f0af30;
+    box-shadow: 0 15px 29px rgba(206, 108, 12, 0.5);
+    line-height: 30px;
+    letter-spacing: 2.4px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: @PaleGoldenRod;
+    }
+  }
+
+  &__lang {
+    position: absolute;
+    left: @langPosition;
+    bottom: @langPosition;
+
+    &__trigger {
+      display: inline-block;
+      width: @langRadius;
+      height: @langRadius;
+      border-radius: @langRadius;
+      line-height: @langRadius;
+
+      &:hover {
+          cursor: pointer;
+      }
+    }
+  }
+}
+
+.selected {
+  background-color: @white;
+  color: #222222;
+}
