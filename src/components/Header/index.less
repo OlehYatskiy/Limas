@@ -1,12 +1,4 @@
-@white: #ffffff;
-@black: #000000;
-@PaleGoldenRod: #e3e182;
-@supernova: #fdaf2a;
-
-@langRadius: 35px;
-@roundBorder: 9em;
-@langPosition: 32px;
-
+@import '../../constants';
 
 .header {
   position: relative;
@@ -16,14 +8,24 @@
   height: 100vh;
   min-height: 670px;
   text-align: center;
+  text-shadow: 2px 2px 6px #000000;
+
+  &__slider {
+    position: absolute;
+    margin-top: -1px;
+    margin-left: -1px;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+
 
   &__logo {
     padding-top: 23vh;
     width: 27em;
-	  filter: contrast(200%) brightness(100%) saturate(50%);
+	  filter: contrast(200%) brightness(100%) saturate(50%) drop-shadow(1px 1px 75px @black);
   }
 
   &__company-name {
+    position: relative;
     font-family: 'Geometria';
     font-size: 60px;
     font-weight: 700;
@@ -31,8 +33,7 @@
   }
 
   &__company-goal {
-    // margin-top: 25px;
-    // margin-bottom: 63px;
+    position: relative;
     margin: 25px 0 63px;
     font-family: 'Geometria';
     font-size: 19px;
@@ -41,7 +42,7 @@
   }
 
   &__button {
-
+    position: relative;
     color: inherit;
     height: 54px;
     width: 207px;
@@ -72,6 +73,7 @@
       height: @langRadius;
       border-radius: @langRadius;
       line-height: @langRadius;
+      text-shadow: none;
 
       &:hover {
           cursor: pointer;

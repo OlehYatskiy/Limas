@@ -15,14 +15,14 @@ class ImgWrapper extends Component {
 
     render() {
       const { outerClass, index, src, alt } = this.props;
-      const classWrapper = classNames(outerClass, style.block, {
-          [style.block0]: index == '0'
+      const classWrapper = classNames(outerClass, style.imgwrapper, {
+          [style.imgwrapper0]: index == '0'
         },
         {
-          [style.block1]: index == '1'
+          [style.imgwrapper1]: index == '1'
         },
         {
-          [style.block2]: index == '2'
+          [style.imgwrapper2]: index == '2'
         },
       );
         return (

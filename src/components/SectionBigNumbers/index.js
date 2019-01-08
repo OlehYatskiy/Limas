@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { object, number, func, any, string, array } from "prop-types";
-
 import classNames from 'classnames';
 
 import style from './index.less';
@@ -21,27 +20,26 @@ class SectionBigNumbers extends Component {
         headline,
         text, } = this.props;
 
-      // const { head, tail, headlineBody } = headline;
-      const wrapperStyle = classNames(style.block, outerClass);
-      const textWrapperStyle = classNames(style.blockText, {
-          [style.blockText0]: index == '0'
+      const wrapperStyle = classNames(style.bignumbers, outerClass);
+      const textWrapperStyle = classNames(style.bignumbersText, {
+          [style.bignumbersText0]: index == '0'
         },
         {
-          [style.blockText1]: index == '1'
+          [style.bignumbersText1]: index == '1'
         },
         {
-          [style.blockText2]: index == '2'
+          [style.bignumbersText2]: index == '2'
         },
       );
 
         return (
             <section className={wrapperStyle}>
-              <h2 className={style.blockHeadline}>
-                <span className={style.blockHeadlineHead}>
+              <h2 className={style.bignumbersHeadline}>
+                <span className={style.bignumbersHeadlineHead}>
                   {headline[1]}
                 </span>
-                {headline[0]}
-                <span className={style.blockHeadlineTail}>
+                  {headline[0]}
+                <span className={style.bignumbersHeadlineTail}>
                   {headline[2]}
                 </span>
               </h2>

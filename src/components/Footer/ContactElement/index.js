@@ -17,18 +17,17 @@ class ContactElement extends Component {
       const { outerIcoUrl, outerClass, text, sub } = this.props;
       const classWrapper = classNames(style.block, outerClass);
       const classIcoWrapper = classNames(style.ico, outerIcoUrl);
+
         return (
           <Fragment>
             <div className={classWrapper}>
-              <div className={classIcoWrapper}>
-              </div>
-              {text}
+              <div className={classIcoWrapper}></div>
+                {text}
               <div className={style.blockSub}>
                 {sub}
               </div>
             </div>
           </Fragment>
-
     )
   }
 }

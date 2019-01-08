@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
 import classNames from "classnames";
 
-import style from './index.less';
-import logo from '../../img/logo/logo_white.png';
-const letterImgs = require.context('../../img/letters', true, /\.jpg$/);
-const partnerImgs = require.context('../../img/partners', false, /\.(jpg|png)$/);
-
-//import icons from '../../img';
-
 import SectionWithHeadline from '../SectionWithHeadline';
 import SectionCoursive from '../SectionCoursive';
 import SectionBigNumbers from '../SectionBigNumbers';
 import TitleH3 from '../TitleH3';
 import ImgWrapper from './ImgWrapper';
+
 import ru from '../../data/ru';
+
+import style from './index.less';
+import logo from '../../img/logo/logo_white.png';
+
+const letterImgs = require.context('../../img/letters', true, /\.jpg$/);
+const partnerImgs = require.context('../../img/partners', false, /\.(jpg|png)$/);
+
 
 class Content extends Component {
 
@@ -111,10 +112,7 @@ class Content extends Component {
             }
           </div>
         </div>
-        
-        <div className={style.contentBackgrtri}>
-        </div>
-
+        <div className={style.contentBackgrtri}></div>
       </div>
     )
   }

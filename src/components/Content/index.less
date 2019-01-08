@@ -1,29 +1,10 @@
-//colors
-@nice-blue: #5B83AD;
-@light-blue: @nice-blue + #111;
-@white: #ffffff;
-@black: #000000;
-@nero: #272727;
-@supernova: #fdaf2a;
-@white_lilac: #EBE8E9;
-@meritsHeader: #302d2d;
-@footerBackground: #303030;
-
-//sizes
-@roundBorder: 9em;
-@sectionMarginTop: 92px;
-@contentMarginLeft: 12.44%;
-
+@import '../../constants';
 
 .content {
-
   position: relative;
   overflow: hidden;
   min-height: 670px;
-  background:  url('../../img/background/contentHead.png') no-repeat 0 -3px;
-              // url('../../img/background/contentBottom.png') no-repeat 0 120%;
-  background-color: @white_lilac;
-  // background-size: 105% auto;
+  background: @whiteLilac  url('../../img/background/contentHead.png') no-repeat 0 -3px;
 
   &__logo {
     position: absolute;
@@ -73,7 +54,6 @@
     }
 
     &__sections {
-
       box-sizing: border-box;
       margin-top: 45px;
       margin-right: 32.5px;
@@ -128,15 +108,10 @@
 	  height: 0;
     border-bottom: 33vw solid @footerBackground;
     border-left: 100vw solid transparent;
-
   }
 
 }
 
 .summary-padding-top {
   padding-top: 85px;
-}
-
-.selected {
-  color: red;
 }

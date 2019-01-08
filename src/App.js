@@ -10,9 +10,6 @@ import './data/fonts/Geometria/stylesheet.css';
 import './data/fonts/GothamPro/stylesheet.css';
 import './data/fonts/FuturaDemi/stylesheet.css';
 
-
-
-
 class App extends Component {
 
     render() {

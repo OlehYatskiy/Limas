@@ -1,11 +1,8 @@
-
-@white: #ffffff;
-@nero: #222222;
-@supernova: #F6AE36;
+@import '../../constants';
 @iconImg: ~'url("../../img/icons/icons.png") no-repeat';
 
 
-.block {
+.sectwithdhead {
   color: @nero;
   font-size: 16px;
 
@@ -14,18 +11,22 @@
     &--0 {
       .all();
     }
+
     &--1 {
       .all();
       background: @iconImg -55px;
     }
+
     &--2 {
       .all();
       background: @iconImg -110px;
     }
+
     &--3 {
       .all();
       background: @iconImg -165px;
     }
+
     &--4 {
       .all();
       background: @iconImg -220px;
@@ -40,7 +41,6 @@
   }
 
   &__headline {
-    // margin-top: 16px;
     font-family: "Gotham Pro";
     font-size: 22px;
     font-weight: 700;
@@ -49,17 +49,10 @@
   }
 
   &__text {
-    // width: 472px;
     margin-top: 25px;
     font-family: 'Geometria', sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 26px;
   }
-
-
-}
-
-.selected {
-
 }

@@ -13,20 +13,19 @@ class Footer extends Component {
     render() {
       const { phoneSections, emailSections, time, address, dev } = ru.footer;
 
-      const contactsWrapper = classNames(style.blockContacts, style.blockFloated);
-      const phonesSectionWrapper = classNames(style.blockContactsPhone, style.blockFloated);
-      const emailSectionWrapper = classNames(style.blockContactsEmail, style.blockFloated);
-      const timeSectionWrapper = classNames(style.blockContacts, style.blockFloated);
+      const contactsWrapper = classNames(style.footerContacts, style.footerFloated);
+      const phonesSectionWrapper = classNames(style.footerContactsPhone, style.footerFloated);
+      const emailSectionWrapper = classNames(style.footerContactsEmail, style.footerFloated);
+      const timeSectionWrapper = classNames(style.footerContacts, style.footerFloated);
 
         return (
-            <footer className={style.block}>
-
+            <footer className={style.footer}>
               <div className={contactsWrapper}>
                 <section className={phonesSectionWrapper}>
                   {
                     phoneSections.map((el, index) => {
                       return <ContactElement
-                         outerClass={style.blockContactsMarginedBottom}
+                         outerClass={style.footerContactsMarginedBottom}
                          key={index}
                          index={index}
                          text={el.phone}
@@ -39,7 +38,7 @@ class Footer extends Component {
                   {
                     emailSections.map((el, index) => {
                       return <ContactElement
-                        outerClass={style.blockContactsMarginedBottom}
+                        outerClass={style.footerContactsMarginedBottom}
                         key={index}
                         index={index}
                         text={el.email}
@@ -48,23 +47,20 @@ class Footer extends Component {
                     })
                   }
                 </section>
-                <ContactElement outerClass={style.blockContactsAddress} text={address}/>
+                <ContactElement outerClass={style.footerContactsAddress} text={address}/>
               </div>
-
               <section className={timeSectionWrapper}>
-                <ContactElement text={time} outerClass={style.blockTime} />
-                <img className={style.blockTimeImg} src={addressMap} alt={'map'} />
+                <ContactElement text={time} outerClass={style.footerTime} />
+                <img className={style.footerTimeImg} src={addressMap} alt={'map'} />
               </section>
-
-              <section className={style.blockDev}>
+              <section className={style.footerDev}>
                 <h3>
                   {dev.info}
-                  <span className={style.blockDevStudio}>
+                  <span className={style.footerDevStudio}>
                     {dev.studio}
                   </span>
                 </h3>
               </section>
-
             </footer>
     )
   }

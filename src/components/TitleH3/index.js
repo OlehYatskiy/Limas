@@ -13,7 +13,7 @@ class TitleH3 extends Component {
 
     render() {
       const { text, outerClass } = this.props;
-      const classWrapper = classNames(style.block, outerClass);
+      const classWrapper = classNames(style.titleh3, outerClass);
         return (
             <h3 className={classWrapper}>
                 {text}
